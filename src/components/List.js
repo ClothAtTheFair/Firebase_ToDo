@@ -8,7 +8,7 @@ class List extends Component {
   constructor(props){
     super(props);
       this.state = { showForm: false,
-        formValue: ''};
+        formValue: '', tasksCompleted: 0};
 
         this.formSubmit = this.formSubmit.bind(this);
         this.inputChange = this.inputChange.bind(this);
@@ -38,14 +38,14 @@ class List extends Component {
       return (
           <form onSubmit={this.formSubmit}>
             <label>
-              Name: 
+              Name:  
               <input type = "text"
                 value={formValue}
                 onChange={this.inputChange}
                 id="toDoNext" />
               </label>
-              <input type="submit" value = "Submit" />
-              <label htmlFor="toDoNext">What Next?</label>
+              <input className="button" type="submit" value = "Submit" />
+              <label htmlFor="toDoNext"> What Next?</label>
           </form>
       );
     }
@@ -68,13 +68,14 @@ class List extends Component {
   render() {
     const {showForm} = this.state;
     return (
-      <div>
+      <div className="container">
         <div>
+          <h1 className = "title">To Do List</h1>
           {this.renderForm()}
           {this.renderToDo()}
         </div>
         <div>
-          <button onClick={() => this.setState({showForm: !showForm})}>
+          <button className="close" onClick={() => this.setState({showForm: !showForm})}>
           {showForm ? (
             <i>Close</i>
           ) : (

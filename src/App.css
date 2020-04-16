@@ -1,0 +1,32 @@
+.App {
+    text-align: center;
+    
+}
+
+html {
+    background-color: antiquewhite;
+}
+
+.container {
+    text-align: center;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+.button {
+    border-radius: 15%;
+    margin-left: 2%;
+    color: white;
+    background-color: red;
+    text-shadow: none;
+    border: 2em;
+}
+
+.close {
+    border-radius: 15%;
+    background-color: white;
+    color: red;
+    text-shadow: none;
+    border: 2em;
+    font-size: 16px;
+}
