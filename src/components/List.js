@@ -36,7 +36,7 @@ class List extends Component {
     const {showForm, formValue} = this.state;
     if (showForm) {
       return (
-          <form onSubmit={this.formSubmit}>
+          <form className="todoItem" onSubmit={this.formSubmit}>
             <label>
               Name:  
               <input type = "text"
@@ -60,7 +60,7 @@ class List extends Component {
     }
     return (
       <div>
-        <h4>You have no more things ToDo!</h4>
+        <h4 className= "todoItem">You have no more things ToDo!</h4>
       </div>
     );
   }

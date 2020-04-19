@@ -11,7 +11,7 @@ class ListItem extends Component {
     render() {
         const{todoId, todo} = this.props;
         return (
-            <div key = "toDoName">
+            <div key = "toDoName" className="todoItem">
                 <h4>
                     {todo.title}
                     <button className="button" onClick={() => this.handleComplete(todoId)}>
